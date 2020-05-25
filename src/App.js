@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
+import LeftHand from "./LeftHand";
+import RightHand from "./RightHand";
 
 function App() {
 
@@ -14,11 +16,8 @@ function App() {
 
     return (
         <div className="App">
-            <button type="button" className="btn btn-danger" onClick={clickerPlus}>PLUS</button>
-            <hr/>
-            {count}
-            <hr/>
-            <button type="button" className="btn btn-success" onClick={clickerMinus}>MINUS</button>
+            <LeftHand plus={clickerPlus} minus={clickerMinus}/>
+            <RightHand counter={count}/>
         </div>
     );
 }
