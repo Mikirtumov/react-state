@@ -11,9 +11,9 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={clickerPlus}></button>
+  <button type="button" className="btn btn-danger" onClick={clickerPlus}>PLUS</button>
+      <hr/>
       {count}
-
     </div>
   );
 }
