@@ -2,22 +2,25 @@ import React, {useState} from 'react';
 import './App.css';
 import LeftHand from "./LeftHand";
 import RightHand from "./RightHand";
+import StepConfig from "./StepConfig";
 
 function App() {
 
     const [count, setCount] = useState(10);
+    const [step, stepCount] = useState(2);
 
-    const clickerPlus = () => {
-        setCount(count + 1)
+    const handler = (newValue) => {
+        setCount(newValue);
     }
-    const clickerMinus = () => {
-        setCount(count - 1)
+    const onStepChange = (newValue) => {
+        stepCount(newValue);
     }
 
     return (
         <div className="App">
-            <LeftHand plus={clickerPlus} minus={clickerMinus}/>
-            <RightHand counter={count}/>
+            <LeftHand changeCount={handler} counter={count} step={step}/>
+            <RightHand counter={count} />
+            <StepConfig onStepChange={onStepChange}/>
         </div>
     );
 }
