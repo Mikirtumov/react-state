@@ -6,7 +6,7 @@ function RightHand(props) {
 
     return (
         <div className="h2">
-            {props.counter}
+            {props.count}
         </div>
     );
 }
