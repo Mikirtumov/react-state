@@ -3,6 +3,7 @@ import './App.css';
 import LeftHand from "./LeftHand";
 import RightHand from "./RightHand";
 import StepConfig from "./StepConfig";
+import Random from "./Random";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <LeftHand changeCount={handler} count={count} step={step} />
             <RightHand count={count} />
             <StepConfig onStepChange={onStepChange} />
+            <Random/>
         </div>
     );
 }
