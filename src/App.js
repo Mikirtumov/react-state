@@ -4,17 +4,21 @@ import LeftHand from "./LeftHand";
 import RightHand from "./RightHand";
 import StepConfig from "./StepConfig";
 import Random from "./Random";
+import TimesTen from "./TimesTen";
 
 function App() {
 
-    const [count, setCount] = useState(10);
-    const [step, stepCount] = useState(2);
-    const [randomCount, setRandomCount] = useState(1)
+    const [count, setCount] = useState(0);
+    const [step, stepCount] = useState(0);
+    const [randomCount, setRandomCount] = useState(0)
+    const [timesTen, setTimesTen] = useState(0)
 
 
     const handler = (newValue) => setCount(newValue);
 
     const onStepChange = (newValue) => stepCount(newValue);
+
+
 
 
 
@@ -25,6 +29,8 @@ function App() {
             <RightHand count={count} />
             <StepConfig onStepChange={onStepChange} />
             <Random setRandomCount={setRandomCount} randomCount={randomCount} />
+            <TimesTen timesTen={timesTen} setTimesTen={setTimesTen}/>
+
         </div>
     );
 }
