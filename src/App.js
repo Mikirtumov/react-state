@@ -16,14 +16,15 @@ function App() {
 
     const onStepChange = (newValue) => stepCount(newValue);
 
-    const randomClick = (newValeu) => setRandomCount(newValeu);
+
+
 
     return (
         <div className="App">
             <LeftHand changeCount={handler} count={count} step={step} />
             <RightHand count={count} />
             <StepConfig onStepChange={onStepChange} />
-            <Random randomClick={randomClick} randomCount={randomCount} />
+            <Random setRandomCount={setRandomCount} randomCount={randomCount} />
         </div>
     );
 }
