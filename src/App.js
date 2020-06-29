@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import './App.css';
+import React, {useState} from 'react';
 import LeftHand from "./LeftHand";
 import RightHand from "./RightHand";
 import StepConfig from "./StepConfig";
@@ -26,16 +25,15 @@ function App() {
     }
 
 
-
-
     return (
         <div className="App">
-            <LeftHand changeCount={handler} count={count} step={step} />
-            <RightHand count={count} />
+            <LeftHand changeCount={handler} count={count} step={step}/>
+            <RightHand count={count}/>
             <StepConfig onStepChange={onStepChange} />
-            <Random setRandomCount={setRandomCount} randomCount={randomCount} />
+
+            <Random setRandomCount={setRandomCount} randomCount={randomCount}/>
             <TimesTen timesTen={timesTen} setTimesTen={setTimesTen}/>
-            <button  type="button" className="btn btn-light" onClick={reset}>Reset</button>
+            <button type="button" className="btn btn-light" onClick={reset}>Reset</button>
         </div>
     );
 }

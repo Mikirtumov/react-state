@@ -9,9 +9,9 @@ function LeftHand(props) {
     return (
         <div className="App">
             <h1>Hook useState</h1>
+            <span><button type="button" className="btn btn-success" onClick={clickerPlus}>PLUS</button> </span>
+                <button type="button" className="btn btn-danger" onClick={clickerMinus}>MINUS</button>
 
-            <button type="button" className="btn btn-success mr-2" onClick={clickerPlus}>PLUS</button>
-            <button type="button" className="btn btn-danger" onClick={clickerMinus}>MINUS</button>
 
 
         </div>
