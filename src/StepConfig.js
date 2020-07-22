@@ -5,7 +5,7 @@ function StepConfig(props) {
 
     return (
         <div className="h2">
-            <input placeholder="counter" onChange={(e) => props.onStepChange(+e.target.value)}/>
+            <input placeholder="enter number" onChange={(e) => props.onStepChange(+e.target.value)}/>
         </div>
     );
 }
